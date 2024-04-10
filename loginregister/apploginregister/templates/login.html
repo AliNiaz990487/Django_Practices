@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock title %}
+
+{% block navitems %}
+<li class="navitem">
+    <a href="#" class="nav-link text-muted">Log in</a>
+</li>
+<li class="navitem">
+    <a href="#" class="nav-link text-muted">Create an account</a>
+</li>
+{% endblock navitems %}
+
+{% block body %}
+<p class="h1">Log in</p>
+<form>
+    <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password">
+    </div>
+    <div class="mb-3">
+        <input type="checkbox" id="rememberme">
+        <label for="rememberme`" class="form-label">Remember me</label>
+    </div>
+    <div class="mb-3">
+        <button class="btn btn-primary">Login</button>
+    </div>
+</form>
+
+<hr>
+<ul>
+    <li><a href="" style="text-decoration: none;">Forgot the password?</a></li>
+    <li><a href="" style="text-decoration: none;">Frogot the username?</a></li>
+    <li><a href="" style="text-decoration: none;">Resend an activation code</a></li>
+</ul>
+
+{% endblock body %}
