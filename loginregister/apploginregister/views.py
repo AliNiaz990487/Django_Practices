@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from django.http import HttpRequest
+from icecream import ic
 
 def home(request):
     context = {}

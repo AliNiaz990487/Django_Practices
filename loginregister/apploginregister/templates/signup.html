@@ -8,7 +8,8 @@
 
 {% block body %}
 <p class="h1">Create an account</p>
-<form>
+<form id="form" method="POST" class="needs-validation" novalidate>
+    {% csrf_token %}
     <div class="mb-3">
     <label for="username-input" class="form-label">Username</label>
     <input type="text" class="form-control" id="username-input" placeholder="Username" required>
@@ -16,12 +17,12 @@
     </div>
     <div class="mb-3">
         <label for="first-name" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="first-name" placeholder="First Name">
+        <input type="text" class="form-control" id="first-name" placeholder="First Name" required>
         <div id="first-name-help" class="form-text">Optional.</div>
     </div>
     <div class="mb-3">
         <label for="last-name" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="last-name" placeholder="Last Name">
+        <input type="text" class="form-control" id="last-name" placeholder="Last Name" required>
         <div id="last-name-help" class="form-text">Optional.</div>
     </div>
     <div class="mb-3">
@@ -43,7 +44,7 @@
     </div>
     <div class="mb-3">
         <label for="cpassword" class="for-label">Conform Password</label>
-        <input type="password" class="form-control" id="cpassword" placeholder="Confirm Password">
+        <input type="password" class="form-control" id="cpassword" placeholder="Confirm Password" required>
         <div id="cpassword-help" class="form-text">Enter the same password as before, for verification.</div>
     </div>
     <button type="submit" class="btn btn-primary bg-success">Submit</button>
